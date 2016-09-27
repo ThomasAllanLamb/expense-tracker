@@ -1,0 +1,45 @@
+doctype html
+html
+	head
+		title Expense Tracker
+		link(rel='stylesheet', href='normalize/normalize.css')
+		link(rel='stylesheet', href='stylesheets/style.css')
+		link(rel='stylesheet', href='picker/classic.css')
+		link(rel='stylesheet', href='picker/classic.date.css')
+		script(type='text/javascript' src='javascripts/jquery.min.js')
+		script(type='text/javascript' src='picker/picker.js')
+		script(type='text/javascript' src='picker/picker.date.js')
+		script(type='text/javascript' src='javascripts/main.js')
+
+	body
+		div.attribution Demo by #[a(href='mailto:lambyte@lambyte.com') Thomas Lamb]
+		h1 Expense Tracker
+		p Create and view your expenses.
+
+		div.interactive-zone
+			div.newExpense
+				h2 Enter a new expense
+				form#newExpense
+					div.tuple
+						label(for='quantity') Quantity: 
+						input#quantity(type='text')
+					div.tuple
+						label(for='description') Description: 
+						input#description(type='text')
+					div.tuple
+						label(for='date') Date: 
+						input#date(type='text')
+					input#submitExpense(type='button', value='Submit')
+
+			div.view
+				h2 View expenses
+				form#search
+					input#query(type="text")
+					input#searchSubmit(type="button" value="Search")
+				table#view
+					thead
+						tr
+							td Description
+							td Date
+							td Quantity
+					tbody

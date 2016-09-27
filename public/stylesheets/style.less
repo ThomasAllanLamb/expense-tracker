@@ -1,0 +1,118 @@
+html, body, div
+{
+	box-sizing: border-box;
+}
+
+html
+{
+	background:lightgray;
+	overflow-y:scroll;
+
+	>body 
+	{
+		margin: 0 auto 100px;
+		padding:10px;
+		background:#EFEFE0;
+		overflow:hidden;
+		position:relative;
+		min-height:600px;
+
+		>.attribution
+		{
+			text-align:right;
+		}
+
+		>.interactive-zone
+		{
+			position:relative;
+
+			>.newExpense
+			{
+				margin-bottom:2em;
+
+				>form
+				{
+					.tuple
+					{
+						display:block;
+
+						>label 
+						{
+							display:inline-block;
+							width:35%
+						}
+					}
+				}
+			}
+
+			>.view
+			{
+				margin-bottom:2em;
+
+				>#search
+				{
+					margin-bottom:1em;
+				}
+
+				>#view
+				{
+					margin:0px auto;
+					width:80%;
+					border-collapse:collapse;
+
+					>thead 
+					{
+						text-align:center;
+						font-weight:bold;
+					}
+
+					>thead>tr>td, >tbody>tr>td
+					{
+						padding:0.3em 0.3em;
+					}
+
+					>tbody>tr
+					{
+						>td+td {
+							border-left:solid 1px gray;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:800px) {
+	html
+	{
+		>body 
+		{
+			width:800px;
+
+			>.attribution
+			{
+				position:absolute;
+				top:1em;
+				right:1em;
+			}
+
+			>.interactive-zone
+			{
+				>.newExpense
+				{
+					float:left;
+					width:40%;
+				}
+
+				>.view
+				{
+					padding-left:5%;
+					width:60%;
+					float:left;
+					text-align:right;
+				}
+			}
+		}
+	}
+}
